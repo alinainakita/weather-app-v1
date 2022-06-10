@@ -1,28 +1,31 @@
 body {
   width: 100%;
-  height: 110vh;
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-family: 'Pacifico', cursive;
-  font-family: 'Roboto Flex', sans-serif;
-  
+  height: 100vh;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Pacifico", cursive;
+  font-family: "Roboto Flex", sans-serif;
+
   display: flex;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   background-size: cover;
   align-items: center;
   justify-content: center;
-  }
+}
 
 .container {
- background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/267/original/rainy.png?1652515758") no-repeat;
- background-size: 93%;
- background-position: center;
- background-repeat: no-repeat;
- border-radius: 15px;
- width: 720px;
- height: 1020px;
- font-family: 'IBM Plex Sans', sans-serif;
- border: 3px solid #38C19C;
+  background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/036/767/original/undraw_Map.png?1654847112")
+    no-repeat;
+  background-size: 75%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  width: 720px;
+  height: 730px;
+  font-family: "IBM Plex Sans", sans-serif;
+  border: 3px solid #38c19c;
+  margin-top: 0px;
+  padding-top: 0px;
 }
 
 .searchbar {
@@ -40,11 +43,11 @@ body {
   height: 36px;
   border-radius: 8px 0 0 8px;
   outline: none;
-  color: #9DBFAF;
+  color: #9dbfaf;
 }
 
-.searchTerm:focus{
-  color: #00B4CC;
+.searchTerm:focus {
+  color: #00b4cc;
 }
 
 .search-button {
@@ -54,113 +57,112 @@ body {
   border: #38c19c;
   background: #38c19c;
   text-align: center;
-  font-size:large;
+  font-size: large;
   color: #fff;
   border-radius: 0 10px 10px 0;
   cursor: pointer;
 }
-  .location-button{
-    margin-top: 10px;
-    margin-left: 10px;
-    width: 45px;
-    height: 36px;
-    border: #38c19c;
-    background: #38c19c;
-    text-align: center;
-    font-size:large;
-    color: #fff;
-    border-radius: 10px 10px 10px 10px;
-    cursor: pointer;
+.location-button {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 45px;
+  height: 36px;
+  border: #38c19c;
+  background: #38c19c;
+  text-align: center;
+  font-size: large;
+  color: #fff;
+  border-radius: 10px 10px 10px 10px;
+  cursor: pointer;
 }
 
- h1 {
+h1 {
   display: block;
   margin-top: 12px;
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   font-weight: lighter;
   color: #000000;
   text-align: center;
-  font-family: 'Pacifico', cursive;
-  }
+  font-family: "Pacifico", cursive;
+}
 
-  h5 {
-    display: block;
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight:500;
-    color: #000000;
-    text-align: center;
-    }
+h5 {
+  display: block;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
 
-    
-    h4 {
-      position: center; 
-      margin-left: 50px ;
-      font-family: 'Pacifico', cursive;
-      color:#38c19c;
-      font-size: 30px;
-      
-    }
-  
+h4 {
+  position: center;
+  margin-left: 50px;
+  font-family: "Pacifico", cursive;
+  color: #38c19c;
+  font-size: 30px;
+}
 
-  ul {
-    list-style-type: none;
-    text-align: center;
-    display: inline-block;
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 16px;
-    margin-top: 450px;
-  }
+ul {
+  list-style-type: none;
+  text-align: center;
+  display: inline-block;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 16px;
+  margin-top: 270px;
+}
 
-  .temperature {
-    color: #38C19C;
-    font-size: 50px;
-    text-align: center;
-    margin-left: 10px;
-    font-weight: bold;
-  }
+.temperature {
+  color: #fd6584;
+  font-size: 50px;
+  text-align: center;
+  margin-left: 10px;
+  font-weight: bold;
+}
 
-  .units {
-   position: relative; 
-   top: -22px;
-   }
+.units {
+  position: relative;
+  top: -22px;
+}
 
-   .temperatureDivider {
-    position: relative; 
-    top: -22px;
-   }
+.temperatureDivider {
+  position: relative;
+  top: -22px;
+}
 
-  .weather-conditions {
-    display: inline
-  }
+.weather-conditions {
+  display: inline;
+}
 
 .col-2 {
-  border: 1px solid #38C19C;
+  border: 1px solid #38c19c;
   border-radius: 15px;
   width: 120px;
   height: 100px;
   text-align: center;
   margin-left: 12px;
   margin-right: 10px;
-  margin-top: 1px;
+  margin-top: -80px;
   margin-bottom: 10px;
-  }
+}
 
 .week-forecast {
   padding-top: 82px;
 }
 
-  .cloud-icon {
-color: #38C19C;
-font-size: 32px;
-  }
+.cloud-icon {
+  color: #38c19c;
+  font-size: 32px;
+}
 
-  .rain-icon {
-    color:#38C19C;
-    font-size: 32px;
-      }
+.rain-icon {
+  color: #38c19c;
+  font-size: 32px;
+}
 
-  .sun-icon {
-  color: #38C19C;
+.sun-icon {
+  color: #38c19c;
   font-size: 35px;
 }
 
@@ -175,5 +177,5 @@ a {
 }
 
 a:hover {
-  color: #38C19C;
+  color: #38c19c;
 }

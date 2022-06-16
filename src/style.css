@@ -142,7 +142,7 @@ ul {
   border: 1px solid #38c19c;
   border-radius: 15px;
   width: 120px;
-  height: 100px;
+  height: 120px;
   text-align: center;
   margin-left: 12px;
   margin-right: 10px;
@@ -174,11 +174,31 @@ ul {
   font-size: small;
 }
 
-a {
+.active {
+  color:#fd6584;
+  text-decoration: none;
+  }
+
+.active:hover {
+  text-decoration: none;
+}
+
+.coder {
   color: #000000;
   text-decoration: none;
 }
 
-a:hover {
-  color: #38c19c;
+.coder:hover {
+  color: #fd6584;
+}
+
+.footer {
+  padding-top: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
 }

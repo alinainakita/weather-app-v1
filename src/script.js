@@ -25,10 +25,13 @@ let day = days[now.getDay()];
 
 h5.innerHTML = `${day}, ${hours}:${minutes}`;
 
-function showWeather(response) {
+function displayWeather(response) {
+
+  celsiusTemperature = response.data.main.temp;
+
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
+    celsiusTemperature
   );
   document.querySelector("#feelsLike").innerHTML = Math.round(
     response.data.main.feels_like
@@ -41,10 +44,12 @@ function showWeather(response) {
   response.data.weather[0].main;
 }
 
+
+
 function search(city) {
 let apiKey = "f563c431d2edc1e4d21fad057c73c09f";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-axios.get(apiUrl).then(showWeather);
+axios.get(apiUrl).then(displayWeather);
 }
 
 function handleSubmit(event) {
@@ -59,7 +64,7 @@ function searchLocation(position) {
     position.coords.latitude
   }&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
 
-  axios.get(apiUrl).then(showWeather);
+  axios.get(apiUrl).then(displayWeather);
 }
 
 function getCurrentLocation(event) {
@@ -70,28 +75,50 @@ function getCurrentLocation(event) {
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 66;
 }
 
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 19;
 }
 
-//Week 4: Bonus Exercise Start
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", handleSubmit);
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
+celsiusLink.classList.remove("active");
+fahrenheitLink.classList.add("active");
 
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
+
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelciusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
 
 //Week 4: Bonus Exercise End
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let celsiusTemperature = null;
+
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+// Week 7: Convert Celsius to Fahrenheit
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature)
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelciusTemperature)
 
 search ("Tokyo");

@@ -35,7 +35,11 @@ function displayForecast() {
       `
       <div class="col-2">
   <div class="weather-forecast-date">${day}</div>
-  <i class="fa-solid fa-cloud cloud-icon"></i>
+  <img
+          src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+          alt=""
+          width="68"
+        />
   <div class="weather-forecast-temperatures">
   <span class="weather-forecast-temperature-max"> 29° | </span>
   <span class="weather-forecast-temperature-min"> 18° </span>
@@ -51,7 +55,7 @@ function displayForecast() {
   
   
 
-function displayWeather(response) {
+function displayTemperature(response) {
 
   celsiusTemperature = response.data.main.temp;
 
@@ -75,7 +79,7 @@ function displayWeather(response) {
 function search(city) {
 let apiKey = "f563c431d2edc1e4d21fad057c73c09f";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-axios.get(apiUrl).then(displayWeather);
+axios.get(apiUrl).then(displayTemperature);
 }
 
 function handleSubmit(event) {
@@ -90,7 +94,7 @@ function searchLocation(position) {
     position.coords.latitude
   }&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
 
-  axios.get(apiUrl).then(displayWeather);
+  axios.get(apiUrl).then(displayTemperature);
 }
 
 function getCurrentLocation(event) {

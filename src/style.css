@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-  background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/036/767/original/undraw_Map.png?1654847112")
+  background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/038/185/original/undraw_Map_re_60yf.png?1655947431")
     no-repeat;
   background-size: 75%;
   background-position: center;
@@ -23,7 +23,7 @@ body {
   width: 720px;
   height: 770px;
   font-family: "IBM Plex Sans", sans-serif;
-  border: 3px solid #38c19c;
+  border: 3px solid #99bebe;
   margin-top: 0px;
   padding-top: 0px;
 }
@@ -36,7 +36,7 @@ body {
 
 .searchCity {
   width: 85%;
-  border: 2px solid #38c19c;
+  border: 2px solid #99bebe;
   border-right: none;
   margin-top: 10px;
   padding: 5px;
@@ -47,15 +47,15 @@ body {
 }
 
 .searchTerm:focus {
-  color: #00b4cc;
+  color: #99bebe;
 }
 
 .search-button {
   margin-top: 10px;
   width: 45px;
   height: 36px;
-  border: #38c19c;
-  background: #38c19c;
+  border: #99bebe;
+  background: #99bebe;
   text-align: center;
   font-size: large;
   color: #fff;
@@ -67,8 +67,8 @@ body {
   margin-left: 10px;
   width: 45px;
   height: 36px;
-  border: #38c19c;
-  background: #38c19c;
+  border: #99bebe;
+  background: #99bebe;
   text-align: center;
   font-size: large;
   color: #fff;
@@ -100,7 +100,7 @@ h4 {
   position: center;
   margin-top: -50px;
   font-family: "Pacifico", cursive;
-  color: #38c19c;
+  color: #99bebe;
   font-size: 30px;
   margin-left: 388px;
 
@@ -139,7 +139,7 @@ ul {
 }
 
 .col-2 {
-  border: 1px solid #38c19c;
+  border: 1px solid #99bebe;
   border-radius: 15px;
   width: 120px;
   height: 120px;

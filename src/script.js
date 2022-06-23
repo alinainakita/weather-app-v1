@@ -150,18 +150,11 @@ function displayCelciusTemperature(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-//Week 4: Bonus Exercise End
-
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-let celsiusTemperature = null;
-
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-// Week 7: Convert Celsius to Fahrenheit
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature)
